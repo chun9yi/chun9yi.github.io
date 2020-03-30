@@ -1,0 +1,160 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+  
+* {
+    box-sizing: border-box;
+}
+
+.bg-image {
+    /* The image used */
+    /*background-image: url("../img/backgroundPhoto.jpg");*/
+    
+    /* Add the blur effect */
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+    
+    /* Full height */
+    height: 100%; 
+    
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+    color: black;
+}
+
+.bg-text h1{
+    font-size: 80px;
+    font-family: 'Shadows Into Light', cursive;
+}
+.bg-text p{
+    font-size: 50px;
+    text-align: right;
+    font-family: 'Shadows Into Light', cursive;
+}
+
+.menuBar{
+    position: absolute;
+    top: 1px;
+    left: 15px;
+    color: white;
+}
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+  
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 60px;
+}
+  
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+  
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+  
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+  
+@media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+    }
+}
+
+
+.column {
+    float: left;
+    width: 10%;
+    padding: 5px;
+    background-color: white;
+}
+
+.avatar {
+    vertical-align: middle;
+    border-radius: 50%;
+}
+
+.containerTab{
+    background-color: black;
+    height:50%;
+    color: white;
+    padding: 20px;
+    padding-top: 50px;
+}
+
+.closebtn {
+    float: right;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.containerTab{
+    height: 115%;
+    text-align: left;
+}
+.containerTab h2{
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 53px;
+    text-align: left;
+}
+.containerTab h3{
+    font-family: 'Caveat', cursive;
+    font-size: 43px;
+}
+.containerTab p{
+    font-family: 'Caveat', cursive;
+    font-size: 35px;
+}
+.song{
+    float: left;
+    width: 10%;
+    padding: 5px 5px 5px 5px;
+    text-align: center;
+}
+.songTitle{
+    font-family: 'Permanent Marker', cursive;
+}
