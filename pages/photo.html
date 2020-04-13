@@ -6,6 +6,23 @@
         <link rel="stylesheet" href="../css/photo.css">
         <link href="https://fonts.googleapis.com/css?family=Liu+Jian+Mao+Cao&display=swap" rel="stylesheet">
         <script src="../index.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+          var maxNum = 15;
+          var minNum = 1;
+          var n;
+          $(document).ready(function(){
+            $("img").click(function(){
+                // Change src attribute of image
+                //$(this).attr("src", "../img/change.jpg");
+                n = Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum;
+                $(this).fadeOut(200, function() {
+                  $(this).attr("src", `../img/${n}.jpg`);
+                  $(this).fadeIn(200);
+                });
+            }); 
+          });
+        </script>
     </head>
     <body>
         <div class="bg-image" style="background-image: url(../img/photo.jpg);"></div>
