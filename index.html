@@ -7,6 +7,29 @@
         <link href="https://fonts.googleapis.com/css?family=Allura|Cookie|Dancing+Script|Sacramento&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
         <script src="index.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                function getdate(){
+                    var today = new Date();
+                    var h = today.getHours();
+                    var m = today.getMinutes();
+                    var s = today.getSeconds();
+                    if(s<10){
+                        s = "0"+s;
+                    }
+                    if (m < 10) {
+                    m = "0" + m;
+                }
+                alert(h+" : "+m+" : "+s)
+                //$("h2").text(h+" : "+m+" : "+s);
+                   //setTimeout(function(){getdate()}, 500);
+                }
+    
+                $("button").click(getdate);
+        });
+          </script>
+        
     </head>
     <body>
         
@@ -14,6 +37,10 @@
         <div class="bg-text">
             <h1>A Walk To Remember</h1>
             <p>CHUNGYI</p>
+            
+            <button style="font-size: 30px;
+            font-family: 'Allura', cursive;background: transparent;">what time is it ?</button>
+            <h2></h2>
         </div>
 
         <span class="menuBar" style="font-size:50px;cursor:pointer" onclick="openNav()">&#9776;</span>
