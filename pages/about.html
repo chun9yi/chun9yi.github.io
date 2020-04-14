@@ -16,9 +16,17 @@
                 $("img").click(function(){
                     alert("Hi~");
                 });
+                var n = 0;
                 $("button").click(function(){
-                    $(".profile").css("background", "black");
-                    $(".profile").css("color", "white");
+                    n+=1;
+                    if(n%2==1){
+                        $(".profile").css("background", "black");
+                        $(".profile").css("color", "white");
+                    }
+                    else{
+                        $(".profile").css("background", "white");
+                        $(".profile").css("color", "black");
+                    }
                 });
             });
           </script>
